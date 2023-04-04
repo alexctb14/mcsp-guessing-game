@@ -1,4 +1,9 @@
-let secretNumber = Math.floor(Math.random() * n) + 1;
+function randomNum(n) {
+    return Math.floor(Math.random() * n) + 1;
+  }
+
+let secretNumber = randomNum(10);
+
 
 function getName () {
     let result = prompt(`Please enter your name`)
@@ -21,7 +26,7 @@ let players = {}
 
 function playGame () {
 let name = getName()
-let guess = prompt(`Try to guess the secret number ${name}`)
+let guess = prompt(`Try to guess the secret number between 1 and 10 ${name}`)
 let number = Number(guess)
 let tries = 1
 let keepTrack = [number]
