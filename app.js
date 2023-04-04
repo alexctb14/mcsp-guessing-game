@@ -2,8 +2,6 @@ function randomNum(n) {
     return Math.floor(Math.random() * n) + 1;
   }
 
-let secretNumber = randomNum(10);
-
 
 function getName () {
     let result = prompt(`Please enter your name`)
@@ -25,6 +23,7 @@ function playAgain () {
 let players = {}
 
 function playGame () {
+let secretNumber = randomNum(10);
 let name = getName()
 let guess = prompt(`Try to guess the secret number between 1 and 10 ${name}`)
 let number = Number(guess)
